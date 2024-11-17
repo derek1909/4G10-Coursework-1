@@ -139,3 +139,4 @@ def estimate_A(Z):
 A_hat = estimate_A(Z_test.reshape(M,-1))
 # print(A_hat.shape)
 print(np.max( (A_hat-A_test) ))
+# print(A_hat)
