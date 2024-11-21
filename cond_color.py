@@ -94,7 +94,7 @@ def plot_Z_projection(Z_2dplane, ax=None, title=None, alpha=1, alt_color=False):
 
     # Plot Z_3d_vis for all conditions over all time points
     if ax is None:
-        fig, ax = plt.subplots(figsize=(8, 8))  # Create a new figure and axis if none is provided
+        fig, ax = plt.subplots(figsize=(6, 6))  # Create a new figure and axis if none is provided
 
     for c in range(Z_2dplane.shape[1]):
         ax.plot(Z_2dplane[0, c, :], Z_2dplane[1, c, :], color=colors[c], alpha=alpha)
@@ -102,8 +102,7 @@ def plot_Z_projection(Z_2dplane, ax=None, title=None, alpha=1, alt_color=False):
     plot_start(xstart, ystart, colors, markersize=50, ax=ax, alpha=alpha)
     plot_end(xend, yend, colors, markersize=30, ax=ax, alpha=alpha)
 
-    # ax.set_xlabel(f'FR{plane+1} Plane')
-    # ax.set_ylabel("Axis 2")
+
     if title is not None:
         ax.set_title(title)
     # ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize="small")
